@@ -1,0 +1,49 @@
+header {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size: 40px;
+    color: aliceblue;
+    background-color: rgb(44, 44, 121);
+}
+
+body {
+    margin: 0px;
+}
+
+.search-list {
+    background-color: rgb(233, 233, 233);
+    padding: 10px;
+    height: 100%;
+    float: left;
+}
+
+
+.btn-list {
+    border-radius: 5px;
+    border: solid;
+    border-color: rgb(194, 193, 193);
+    width: 210px;
+    height: 60px;
+    background-color: white;
+    float: center;
+}
+
+.current-weather {
+    border-radius: 7px;
+    border: solid;
+    border-color: rgb(194, 193, 193);
+}
+
+
+.forecast-block {
+    background-color: rgb(62, 130, 255);
+    color: white;
+    padding: 10px;
+    display: block;
+    height: 190px;
+    width: 140px;
+    border-radius: 7px;
+    float: left;
+    margin: 5px;
+}

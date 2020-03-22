@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js" integrity="sha256-AdQN98MVZs44Eq2yTwtoKufhnU+uZ7v2kXnD5vqzZVo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
+
+</head>
+<body>
+    <header>Weather Dashboard</header>
+
+    <div class="p-2"></div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <!-- search container -->
+                <div class="container search-list">
+
+                    <form class="form-inline">
+                        <h4>Search for a City:</h4>
+                        <input class="form-control form-control-sm mr-3 w-75" type="text" placeholder="Search"
+                          aria-label="Search">
+                        <i class="fas fa-search"></i>
+                    </form>
+
+                    <div class="p-4"></div>
+
+                    <!-- list of countries container -->
+                    <div class="container">
+                        <button class="btn-list"></button>
+                        <button class="btn-list"></button>
+                        <button class="btn-list"></button>
+                        <button class="btn-list"></button>
+                        <button class="btn-list"></button>
+                        <button class="btn-list"></button>
+                        <button class="btn-list"></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-sm-9">
+                <!-- current date city weather results container -->
+                <div class="container current-weather" id="current-weather">
+
+                </div>
+
+                <div class="p-2"></div>
+
+                <!-- 5 day forcast container -->
+                <div class="container">
+                    <h3>5-day Forecast:</h3>
+                    <div class="container forecast" id="forecast-block">
+                    
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
