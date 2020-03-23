@@ -30,6 +30,7 @@ body {
 }
 
 .current-weather {
+    display: block;
     border-radius: 7px;
     border: solid;
     border-color: rgb(194, 193, 193);

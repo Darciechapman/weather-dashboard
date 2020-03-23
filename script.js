@@ -8,7 +8,7 @@ $("#search").on("click", function(event) {
 
     event.preventDefault();
 
-    var locationEl = $("#search-input").val();
+    var locationEl = $("#search-input").val().toLowerCase();
 
     if (locationEl === "") {
         $("#search-input").removeAttr('placeholder');
