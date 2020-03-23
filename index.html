@@ -22,26 +22,27 @@
 
                     <form class="form-inline">
                         <h4>Search for a City:</h4>
-                        <input id="search" class="form-control" type="text" placeholder="Search" aria-label="Search">
+                        <div class="input-group mb-3">
+                            <input type="text" id="search-input" class="form-control" placeholder="City Location" aria-label="Location" aria-describedby="basic-addon2">
+                            <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button" id="search">Search</button>
+                            </div>
+                            <br>
+                        </div>
                     </form>
-
+                    
                     <div class="p-4"></div>
 
                     <!-- list of countries container -->
-                    <div class="container">
-                        <button class="btn-list"></button>
-                        <button class="btn-list"></button>
-                        <button class="btn-list"></button>
-                        <button class="btn-list"></button>
-                        <button class="btn-list"></button>
-                        <button class="btn-list"></button>
-                        <button class="btn-list"></button>
+                    <div class="container" id="button-list">
+                        
                     </div>
                 </div>
             </div>
 
             <div class="col-sm-9">
                 <!-- current date city weather results container -->
+                
                 <div class="container current-weather" id="current-weather">
 
                 </div>
