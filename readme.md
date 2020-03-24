@@ -22,6 +22,7 @@ Logic
 Issues
 
 - Changing the global varible, locationEl, depending if there is a local storage key or if a button was pressed
+- prepending button function. Creating a limit of 7 buttons 
  
 
 
