@@ -19,4 +19,9 @@ Logic
 - storing search into local storage
 - displaying local storage location result on search
 
+Issues
+
+- Changing the global varible, locationEl, depending if there is a local storage key or if a button was pressed
+ 
+
 
