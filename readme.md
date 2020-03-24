@@ -2,11 +2,11 @@ Weather Dashboard
 
 HTML
 
-Containers for search bar, appending buttons, weather and forecast
+- Containers for search bar, appending buttons, weather and forecast
 
 CSS
 
-responsive
+- responsive
 
 Logic
 
