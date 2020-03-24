@@ -2,33 +2,39 @@ var date = new Date();
 var dayDate = date.getDate();
 var monthDate = date.getMonth() + 1;
 var yearDate = date.getFullYear();
-var locationEl = $("#search-input").val();
+var counter = 0;
+
+var locationEl = ""
+
+//function checkingLocalSt() {
+
+//    if(localStorage.getItem("Location")===null) {
+
+//    locationEl = $("#search-input").val().toLowerCase();
+//    localStorage.setItem('Location', JSON.stringify(locationEl));
+
+//    return locationEl
+
+//    } else {
+//    var locationEl = localStorage.getItem("Location");
+//    console.log(locationEl)
+
+//    return locationEl
+
+//    }
+//}
+
+//checkingLocalSt();
 
 $("#search").on("click", function(event) {
 
-    event.preventDefault();
+    locationEl = $("#search-input").val().toLowerCase();
 
-    var locationEl = $("#search-input").val().toLowerCase();
-
-    if (locationEl === "") {
-        $("#search-input").removeAttr('placeholder');
-        $("#search-input").attr("placeholder", "Error")
-    } else {
+    createBtn();
         
-        var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + locationEl + "&units=metric&appid=d6db38001e351111dd620023b7c30d07";
-        var forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + locationEl + "&units=metric&appid=d6db38001e351111dd620023b7c30d07"
+    var currentQueryURL = "https://api.openweathermap.org/data/2.5/weather?q=" + locationEl + "&units=metric&appid=d6db38001e351111dd620023b7c30d07";
+    var forecastQueryURL = "https://api.openweathermap.org/data/2.5/forecast?q=" + locationEl + "&units=metric&appid=d6db38001e351111dd620023b7c30d07"
 
-        createLocationBtn();
-    }
-
-    function createLocationBtn() {
-
-            var btnId = $("<button>").text(locationEl);
-            btnId.addClass("btn-list")
-
-            $("#button-list").append(btnId);
-        
-    }
 
     $.ajax({
     url: currentQueryURL,
@@ -85,6 +91,7 @@ $("#search").on("click", function(event) {
             var forecastContainer = $("<div>").addClass("forecast-block");  
             var dateId = $("<h5>").text(response.list[e].dt_txt);
             var iconId = $("<img>").attr("src","http://openweathermap.org/img/wn/" + iconNumber + "@2x.png");
+            iconId.attr("id", "icon")
             iconId.width("35px")
 
             var tempId = $("<p>").text("Temp: " + response.list[e].main.temp + " °C");
@@ -105,3 +112,18 @@ $("#search").on("click", function(event) {
     })
 
 })
+
+function createBtn() {
+    counter++;
+
+    if(counter<8) {
+
+        var btn = $("<button>").text(locationEl);
+        btn.addClass("btn-list")
+
+        $("#button-list").prepend(btn)
+    } else {
+
+        //$("#button-list").empty();
+    }
+}
