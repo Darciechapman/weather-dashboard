@@ -123,7 +123,7 @@ function createBtn() {
 
         $("#button-list").prepend(btn)
     } else {
-
-        //$("#button-list").empty();
+        conter === 0
+        $("#button-list").empty();
     }
 }
