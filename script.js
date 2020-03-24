@@ -43,6 +43,7 @@ $("#search").on("click", function(event) {
 
         $("#current-weather").empty();
 
+        //getting and displaying current weather details
         function addCurrentWeather() {
 
             event.preventDefault();
@@ -84,6 +85,7 @@ $("#search").on("click", function(event) {
 
         $("#forecast-block").empty();
 
+        //getting 5 day forecast details. for each day create HTML element
         list5thDay.forEach(function(e) {
 
             var iconNumber = response.list[e].weather[0].icon
@@ -113,6 +115,7 @@ $("#search").on("click", function(event) {
 
 })
 
+//create button when search is clicked
 function createBtn() {
     counter++;
 
